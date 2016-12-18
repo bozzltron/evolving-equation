@@ -25,9 +25,9 @@ while(evolving) {
 	function closest(num, arr){
 	    var curr = arr[0];
 	    var index = 0;
-	    arr.forEach((val, i)=>{
-	    	if (Math.abs(num - val.solution) < Math.abs(num - curr)) {
-	            curr = val.solution;
+	    arr.forEach((agent, i)=>{
+	    	if (Math.abs(num - agent.solution) < Math.abs(num - curr.solution)) {
+	            curr = agent.solution;
 	            index = i;
 	    	}
 	    })
@@ -42,7 +42,7 @@ while(evolving) {
 		console.log("solution", agent.solution);
 	});
 
-	console.log("Best result was " + agents[index].solution + " so the winner is index : " + agents[index].equation);
+	console.log("Best result was " + agents[index].equation + " = " + agents[index].solution);
 
 	if(agents[index].solution == target) {
 		evolving = false;
