@@ -1,0 +1,27 @@
+{
+  "name": "evolving-equation",
+  "version": "2.0.0",
+  "description": "Evolutionary algorithm to find equations that evaluate to a target value",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc index.ts --outDir dist --target ES2020 --module commonjs --esModuleInterop",
+    "start": "node dist/index.js",
+    "dev": "ts-node index.ts"
+  },
+  "keywords": [
+    "genetic-algorithm",
+    "evolutionary-algorithm",
+    "optimization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "expr-eval": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
+
